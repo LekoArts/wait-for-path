@@ -1,2 +1,2 @@
-export { waitForPath } from "./waitForPath"
-export { type WaitForPathResult } from "./waitForPath"
+export { waitForPath } from './waitForPath'
+export { type WaitForPathResult } from './waitForPath'

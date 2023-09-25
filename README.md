@@ -1,6 +1,6 @@
 # Wait for Path
 
-This is a fork of [aleclarson/wait-for-path](https://github.com/aleclarson/wait-for-path) to update dependencies and do the occasional fix.
+This is a fork of [aleclarson/wait-for-path](https://github.com/aleclarson/wait-for-path) to update dependencies and do the occasional fix. This package is **ESM only**.
 
 > Efficiently wait for a path to exist (cross-platform)
 
@@ -13,10 +13,10 @@ npm install @lekoarts/wait-for-path
 ```
 
 ```ts
-import { waitForPath } from "@lekoarts/wait-for-path"
+import { waitForPath } from '@lekoarts/wait-for-path'
 
-waitForPath("./foo/bar/baz").then(stat => {
-  console.log(stat); // fs.Stat object
+waitForPath('./foo/bar/baz').then((stat) => {
+  console.log(stat) // fs.Stat object
 })
 ```
 

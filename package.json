@@ -1,14 +1,51 @@
 {
   "name": "@lekoarts/wait-for-path",
+  "type": "module",
   "version": "0.0.1",
   "description": "Efficiently wait for a path to exist (cross-platform)",
   "author": "Braden Snell",
-  "contributors": ["LekoArts"],
+  "contributors": [
+    "LekoArts"
+  ],
   "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "watch": "pnpm run build --watch",
+    "prepare": "pnpm run build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
   "devDependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.10",
     "@types/fs-extra": "^11.0.2",
     "@types/node": "^20.6.5",
+    "eslint": "^8.50.0",
     "fs-extra": "^11.1.1",
-    "typescript": "^5.2.2"
+    "lint-staged": "^14.0.1",
+    "simple-git-hooks": "^2.9.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
