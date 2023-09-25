@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Efficiently wait for a path to exist (cross-platform)",
   "author": "Braden Snell",
   "contributors": [
@@ -14,9 +14,11 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
+      "default": "./dist/index.mjs"
     }
   },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "LICENSE",
     "README.md",
